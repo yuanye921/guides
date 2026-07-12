@@ -200,13 +200,16 @@ function applyLatestGuideTweaks(value) {
   const verificationCallout = `:::color1
 再次打开设置时，快速预设栏会跳回自定义，不用理会它。
 
-请核对这三项：
+请核对这三类信息：
 
-- **URL：** [https://api.yuyanjia.top/v1](https://api.yuyanjia.top/v1)
+- **URL（广州服务器）：** [https://api.yuyanjia.top/v1](https://api.yuyanjia.top/v1)
+- **URL（香港服务器）：** [https://hk-api.yuyanjia.top/v1](https://hk-api.yuyanjia.top/v1)
 - **密钥：** 已粘贴刚才复制的密钥
 - **模型：** 保持默认或按下方建议选择
 
-只要这三项对上，就可以保存使用。
+这两个 URL 都是同一个站子的入口，选择自己能用的就好。
+
+只要 URL、密钥、模型对上，就可以保存使用。
 
 :::`;
 
@@ -220,10 +223,15 @@ function applyLatestGuideTweaks(value) {
 
 点击【购买兑换码】`;
 
-  const registrationNote = `点击链接注册：[https://api.yuyanjia.top/sign-up](https://api.yuyanjia.top/sign-up)
+  const registrationNote = `点击链接注册：
+
+- 广州入口：[https://api.yuyanjia.top/sign-up](https://api.yuyanjia.top/sign-up)
+- 香港备用入口：[https://hk-api.yuyanjia.top/sign-up](https://hk-api.yuyanjia.top/sign-up)
 
 :::color1
 注册账号目前**仅支持 QQ 邮箱验证**。注册后可以使用每日签到和邀请福利，额度、充值记录、消耗明细也都可以在账号里查看。
+
+这两个注册链接也是同一个站子的入口，选择自己能打开的那个就好。
 
 如果没有 QQ 邮箱，或收不到验证码，建议回到上面的【方案一：直购密钥】。
 
@@ -236,13 +244,13 @@ function applyLatestGuideTweaks(value) {
       "OK，大功告成，现在就可以去聊天了！\n\n### 🔎 密钥余额查询\n\n如果想确认直购密钥的额度是否到账，或之后想看剩余额度，可以打开 [密钥余额查询](https://balance-checker.yuyanjia.top)，粘贴刚才复制的 sk- 密钥查看。"
     )
     .replace(
-      /点击链接注册：\[https:\/\/api\.yuyanjia\.top\/sign-up]\(https:\/\/api\.yuyanjia\.top\/sign-up\)(?!\s*\n+:::color1\s*\n+注册账号目前)/u,
+      /点击链接注册：\[[^\]\n]+\/sign-up]\([^)]+\/sign-up\)(?!\s*\n+:::color1\s*\n+注册账号目前)/u,
       registrationNote
     )
     .replace(/点击【购买兑换码】/u, directTopupBranch)
     .replace(/在分类中选择【API】/u, "分类切换至【API站充值】")
     .replace(
-      /:::color1\s*\n再次打开设置时，快速预设栏会跳回自定义，不用理会它\s*\n\*\*URL：\*\*\[https:\/\/api\.yuyanjia\.top\/v1]\(https:\/\/api\.yuyanjia\.top\/v1\)\s*\n\*{2,}密钥、模型\s*\n\*\*只需要核对这三个信息即可\*\*\s*\n:::/gu,
+      /:::color1\s*\n再次打开设置时，快速预设栏会跳回自定义，不用理会它\s*\n\*\*URL：\*\*\[[^\]\n]+\/v1]\([^)]+\/v1\)\s*\n\*{2,}密钥、模型\s*\n\*\*只需要核对这三个信息即可\*\*\s*\n:::/gu,
       verificationCallout
     )
     .replace(
