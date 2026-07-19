@@ -202,13 +202,12 @@ function applyLatestGuideTweaks(value) {
 
 请核对这三类信息：
 
-- **URL（主地址，优先使用）：** [https://api.yuyanjia.top/v1](https://api.yuyanjia.top/v1)
-- **URL（香港备用）：** [https://hk-api.yuyanjia.top/v1](https://hk-api.yuyanjia.top/v1)
-- **URL（直连备用，仅适合支持 \`http://\` 的客户端）：** [http://42.240.142.57:3000/v1](http://42.240.142.57:3000/v1)
+- **URL（主站，香港）：** [https://api.yuyanjia.top/v1](https://api.yuyanjia.top/v1)
+- **URL（备用，北京）：** [https://82.156.90.32:3010/v1](https://82.156.90.32:3010/v1)
 - **密钥：** 已粘贴刚才复制的密钥
 - **模型：** 保持默认或按下方建议选择
 
-这三个 URL 都是同一个 API 站的入口，选择自己能用的就好。一般先用主地址；主地址打不开再试香港备用；直连备用是 \`http://\`，小手机或其他必须 \`https://\` 开头的应用不能用它。
+这两个 URL 都是同一个 API 站的入口，选择自己能用的就好。一般先用主站；主站打不开再试备用。
 
 只要 URL、密钥、模型对上，就可以保存使用。
 
@@ -226,13 +225,13 @@ function applyLatestGuideTweaks(value) {
 
   const registrationNote = `点击链接注册：
 
-- 主地址：[https://api.yuyanjia.top/sign-up](https://api.yuyanjia.top/sign-up)
-- 备用入口：[http://42.240.142.57:3000/sign-up](http://42.240.142.57:3000/sign-up)
+- 主站：[https://api.yuyanjia.top/sign-up](https://api.yuyanjia.top/sign-up)
+- 备用入口：[https://82.156.90.32:3010/sign-up](https://82.156.90.32:3010/sign-up)
 
 :::color1
 注册账号目前**仅支持 QQ 邮箱验证**。注册后可以使用每日签到和邀请福利，额度、充值记录、消耗明细也都可以在账号里查看。
 
-这两个注册链接也是同一个站子的入口，选择自己能打开的那个就好。备用入口是 \`http://\`，如果浏览器或网络环境拦截非 HTTPS，就用主站注册链接。
+这两个注册链接也是同一个站子的入口，选择自己能打开的那个就好。
 
 如果没有 QQ 邮箱，或收不到验证码，建议回到上面的【方案一：直购密钥】。
 
