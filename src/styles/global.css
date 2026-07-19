@@ -752,6 +752,18 @@ summary:focus-visible {
   text-underline-offset: 4px;
 }
 
+.guide-content a[href="https://api.yuyanjia.top/v1"],
+.guide-content a[href="https://82.156.90.32:3010/v1"],
+.guide-content a[href="https://api.yuyanjia.top/sign-up"],
+.guide-content a[href="https://82.156.90.32:3010/sign-up"] {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
 .guide-content img {
   display: block;
   width: min(100%, 940px);
