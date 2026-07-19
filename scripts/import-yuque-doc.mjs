@@ -202,10 +202,18 @@ function applyLatestGuideTweaks(value) {
 
 请核对这三类信息：
 
-- **URL（主站，香港）：** [https://api.yuyanjia.top/v1](https://api.yuyanjia.top/v1)
-- **URL（备用，北京）：** [https://82.156.90.32:3010/v1](https://82.156.90.32:3010/v1)
-- **密钥：** 已粘贴刚才复制的密钥
-- **模型：** 保持默认或按下方建议选择
+<ul class="guide-url-list">
+  <li class="guide-url-item">
+    <span class="guide-url-label"><strong>URL（主站，香港）：</strong></span>
+    <a class="guide-url-value" href="https://api.yuyanjia.top/v1">https://api.yuyanjia.top/v1</a>
+  </li>
+  <li class="guide-url-item">
+    <span class="guide-url-label"><strong>URL（备用，北京）：</strong></span>
+    <a class="guide-url-value" href="https://82.156.90.32:3010/v1">https://82.156.90.32:3010/v1</a>
+  </li>
+  <li><strong>密钥：</strong>已粘贴刚才复制的密钥</li>
+  <li><strong>模型：</strong>保持默认或按下方建议选择</li>
+</ul>
 
 这两个 URL 都是同一个 API 站的入口，选择自己能用的就好。一般先用主站；主站打不开再试备用。
 
@@ -225,8 +233,16 @@ function applyLatestGuideTweaks(value) {
 
   const registrationNote = `点击链接注册：
 
-- 主站：[https://api.yuyanjia.top/sign-up](https://api.yuyanjia.top/sign-up)
-- 备用入口：[https://82.156.90.32:3010/sign-up](https://82.156.90.32:3010/sign-up)
+<ul class="guide-url-list">
+  <li class="guide-url-item">
+    <span class="guide-url-label"><strong>主站：</strong></span>
+    <a class="guide-url-value" href="https://api.yuyanjia.top/sign-up">https://api.yuyanjia.top/sign-up</a>
+  </li>
+  <li class="guide-url-item">
+    <span class="guide-url-label"><strong>备用入口：</strong></span>
+    <a class="guide-url-value" href="https://82.156.90.32:3010/sign-up">https://82.156.90.32:3010/sign-up</a>
+  </li>
+</ul>
 
 :::color1
 注册账号目前**仅支持 QQ 邮箱验证**。注册后可以使用每日签到和邀请福利，额度、充值记录、消耗明细也都可以在账号里查看。
