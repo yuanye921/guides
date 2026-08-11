@@ -7,48 +7,6 @@ slug: "yuyanjia-api"
 source: "https://guides.yuyanjia.top/guides/yuyanjia-api"
 ---
 
-## 🪄 什么是 API？（通俗易懂版）
-
-> 已经会填写 API 的老手，可以直接跳到下面的 [购买方式说明](#购买方式说明)。
-
-预言家 TV 的文游需要 AI 大模型帮你续写剧情。你可以把提供 AI 服务的平台想成一家“魔法公司”，而 APP 就像替你送信的猫头鹰。
-
-- **🏢 Base URL（地址）：** 魔法公司的办公地址，告诉猫头鹰应该去哪里送信。
-- **🔑 API Key（密钥）：** 这家公司的通行证，证明它允许你使用服务。
-- **🤖 Model（模型）：** 真正负责阅读来信、思考剧情并给你回信的员工，比如 Gemini、Claude、DeepSeek。
-
-只有“地址、钥匙、员工”三样东西互相配套，猫头鹰才能顺利把回信带回来。
-
-### 🚨 常见错误一：自己随便填了一个 API Key
-
-API Key 不是登录密码，不能由自己随手编一个。它必须由你准备使用的 API 平台生成并发给你。
-
-简单来说：你可以去对应平台**注册账号后创建密钥**，也可以从它提供的**正规购买渠道获得现成密钥**。从哪家平台拿到密钥，就按照哪家平台给出的地址和模型来填写。
-
-密钥通常是一长串字母和数字，复制时一个字符都不能少。它和银行卡密码差不多重要，不要发给陌生人，也尽量不要把完整密钥放进截图。
-
-### 🚨 常见错误二：钥匙插错门
-
-如果你拿到的是 A 平台的密钥，就要在设置里填写 A 平台的 Base URL。
-
-拿着 B 公司的钥匙去开 A 公司的门，当然不会有反应。哪怕密钥本身没有错，只要地址对不上，照样无法使用。
-
-### 🚨 常见错误三：叫错员工名字
-
-每个模型在不同平台都有自己的“工号”。尤其是 API 中转站，为了区分不同渠道，模型名称前面通常会带上 `[cli]`、`[满血]` 之类的前缀。
-
-复制模型名称时，必须把前缀和括号一起完整复制。少一个字、少一个符号，公司都可能找不到这位员工。
-
-不过现在大多数 APP 都支持**拉取模型**，最省事的做法是：
-
-1. 先填好 Base URL 和 API Key。
-2. 点击【拉取模型】或【刷新模型列表】。
-3. 直接从列表里选择想用的模型，不要自己手打名称。
-
-只有拉取失败时，才需要去模型广场复制模型名称；这时记得把 `[前缀]` 或 `【前缀】` 一起复制完整。
-
-如果还是无法使用，就按顺序检查一遍：**地址有没有填完整、密钥有没有复制完整、模型是不是从正确的平台拉取的。** 多数 API 问题都藏在这三处。
-
 :::success
 
 ## 🛍️ 购买方式说明
@@ -69,6 +27,13 @@ API Key 不是登录密码，不能由自己随手编一个。它必须由你准
     <em>掌控全场</em>
     <small>先注册 API 站账号（仅支持 QQ 邮箱验证），可支付宝直充或兑换码充值。</small>
     <b>有签到及邀请福利，适合：想看清楚钱花在哪的同学。</b>
+  </a>
+  <a class="choice-card choice-card-guide" href="#api-basics">
+    <span>第一次使用 API？</span>
+    <strong>先看懂“地址、钥匙、员工”</strong>
+    <em>新手补课</em>
+    <small>三分钟弄懂 Base URL、API Key 和模型，顺便避开最常见的配置错误。</small>
+    <b>跳到通俗易懂版 ↓</b>
   </a>
 </div>
 
@@ -290,6 +255,91 @@ API 密钥栏：粘贴刚才复制的密钥。
 只要 URL、密钥、模型对上，就可以保存使用。
 
 :::
+
+<section class="api-basics" id="api-basics" aria-labelledby="api-basics-title">
+  <header class="api-basics-header">
+    <div>
+      <span class="api-basics-kicker">新手补课 · 老手可跳过</span>
+      <h2 id="api-basics-title">🪄 什么是 API？</h2>
+      <p>预言家 TV 的文游需要 AI 大模型帮你续写剧情。你可以把提供 AI 服务的平台想成一家“魔法公司”，而 APP 就像替你送信的猫头鹰。</p>
+    </div>
+    <a class="api-basics-back" href="#购买方式说明">↑ 返回购买方式</a>
+  </header>
+  <div class="api-parts" aria-label="API 的三个组成部分">
+    <article class="api-part">
+      <span class="api-part-icon" aria-hidden="true">🏢</span>
+      <div>
+        <small>Base URL · 地址</small>
+        <h3>公司的办公地址</h3>
+        <p>告诉猫头鹰应该去哪里送信。</p>
+      </div>
+    </article>
+    <article class="api-part">
+      <span class="api-part-icon" aria-hidden="true">🔑</span>
+      <div>
+        <small>API Key · 密钥</small>
+        <h3>公司的通行证</h3>
+        <p>证明平台允许你使用它的服务。</p>
+      </div>
+    </article>
+    <article class="api-part">
+      <span class="api-part-icon" aria-hidden="true">🤖</span>
+      <div>
+        <small>Model · 模型</small>
+        <h3>负责回信的员工</h3>
+        <p>比如 Gemini、Claude、DeepSeek。</p>
+      </div>
+    </article>
+  </div>
+  <div class="api-match-rule">
+    <span>魔法生效公式</span>
+    <strong>地址 ＋ 钥匙 ＋ 员工 ＝ 顺利回信</strong>
+    <p>三样东西必须来自互相匹配的平台，少一样或填错一样都不行。</p>
+  </div>
+  <div class="api-error-list">
+    <article class="api-error-item">
+      <span class="api-error-index">01</span>
+      <div>
+        <h3>钥匙不是自己编的密码</h3>
+        <p>API Key 必须由你准备使用的平台生成。可以去对应平台注册账号后创建，也可以从它提供的正规渠道购买现成密钥；从哪家拿到密钥，就使用哪家给出的地址和模型。</p>
+        <p class="api-error-note">密钥和银行卡密码差不多重要：复制时一个字符都不能少，也不要发给陌生人或放进公开截图。</p>
+      </div>
+    </article>
+    <article class="api-error-item">
+      <span class="api-error-index">02</span>
+      <div>
+        <h3>别把钥匙插错门</h3>
+        <p>拿到 A 平台的密钥，就要填写 A 平台的 Base URL。拿着 B 公司的钥匙去开 A 公司的门，密钥本身没错也不会有反应。</p>
+      </div>
+    </article>
+    <article class="api-error-item">
+      <span class="api-error-index">03</span>
+      <div>
+        <h3>别叫错员工的“工号”</h3>
+        <p>中转站为了区分渠道，模型名称通常会带上 <code>[cli]</code>、<code>[满血]</code> 之类的前缀。手动复制时必须连同括号一起复制完整，少一个符号都可能找不到模型。</p>
+      </div>
+    </article>
+  </div>
+  <aside class="api-pull-guide">
+    <div class="api-pull-copy">
+      <span>最省事的正确姿势</span>
+      <h3>能拉取模型，就别自己手打工号</h3>
+      <p>现在大多数 APP 都会直接读取这家平台有哪些员工，让它替你抄名字最稳妥。</p>
+    </div>
+    <ol>
+      <li><span>1</span>填好 Base URL 和 API Key</li>
+      <li><span>2</span>点击【拉取模型】或【刷新模型列表】</li>
+      <li><span>3</span>直接从列表里选择，不要自己手打</li>
+    </ol>
+  </aside>
+  <footer class="api-checklist">
+    <span>还是用不了？</span>
+    <p>按顺序检查：<strong>地址是否完整 → 密钥是否完整 → 模型是否来自正确的平台。</strong> 多数 API 问题都藏在这三处。</p>
+    <a href="#购买方式说明">看懂了，返回购买方式 ↑</a>
+  </footer>
+</section>
+
+## 🧠 模型选择建议
 
 为了保证大家的体验，站内所有模型我都亲自测试筛选过。
 

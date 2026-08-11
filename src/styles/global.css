@@ -903,6 +903,343 @@ summary:focus-visible {
   color: var(--ink-strong);
 }
 
+.choice-card-guide {
+  grid-column: 1 / -1;
+  grid-template-areas:
+    "label badge"
+    "title action"
+    "description action";
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 28px;
+  align-items: center;
+  border-color: color-mix(in srgb, var(--blue) 32%, var(--line));
+  background:
+    linear-gradient(110deg, color-mix(in srgb, var(--blue) 14%, transparent), transparent 58%),
+    color-mix(in srgb, var(--panel) 72%, transparent);
+}
+
+.choice-card-guide:hover {
+  border-color: color-mix(in srgb, var(--blue) 58%, var(--line-strong));
+}
+
+.choice-card-guide span {
+  grid-area: label;
+  color: var(--blue);
+}
+
+.choice-card-guide strong {
+  grid-area: title;
+  font-size: 21px;
+}
+
+.choice-card-guide em {
+  grid-area: badge;
+  justify-self: end;
+  border: 1px solid color-mix(in srgb, var(--green) 34%, transparent);
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: color-mix(in srgb, var(--green) 10%, transparent);
+  font-size: 13px;
+}
+
+.choice-card-guide small {
+  grid-area: description;
+  color: var(--muted);
+}
+
+.choice-card-guide b {
+  grid-area: action;
+  justify-self: end;
+  border: 1px solid color-mix(in srgb, var(--gold) 38%, transparent);
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--gold) 10%, transparent);
+  color: var(--gold-bright);
+  white-space: nowrap;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.choice-card-guide:hover b {
+  border-color: color-mix(in srgb, var(--gold) 64%, transparent);
+  background: color-mix(in srgb, var(--gold) 16%, transparent);
+}
+
+.api-basics {
+  scroll-margin-top: 24px;
+  overflow: hidden;
+  margin: 42px 0 32px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--blue) 10%, transparent), transparent 34%),
+    color-mix(in srgb, var(--panel) 88%, transparent);
+  box-shadow: var(--soft-shadow);
+}
+
+.api-basics-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  border-bottom: 1px solid var(--line);
+  padding: 26px 28px 22px;
+}
+
+.api-basics-kicker {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.guide-content .api-basics h2 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.guide-content .api-basics-header p {
+  max-width: 720px;
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.guide-content .api-basics-back,
+.guide-content .api-checklist a {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  color: var(--gold-bright);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.guide-content .api-basics-back:hover,
+.guide-content .api-checklist a:hover {
+  border-color: var(--line-strong);
+  background: color-mix(in srgb, var(--gold) 9%, transparent);
+}
+
+.api-parts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 24px 26px 14px;
+}
+
+.api-part {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  border-radius: 16px;
+  padding: 16px;
+  background: color-mix(in srgb, var(--panel-bright) 54%, transparent);
+}
+
+.api-part-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--blue) 12%, transparent);
+  font-size: 20px;
+}
+
+.api-part small {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.guide-content .api-part h3,
+.guide-content .api-error-item h3,
+.guide-content .api-pull-copy h3 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  color: var(--ink-strong);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.guide-content .api-part p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.api-match-rule {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 3px 14px;
+  align-items: center;
+  margin: 0 26px 20px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 14px 14px 0;
+  padding: 13px 16px;
+  background: color-mix(in srgb, var(--gold) 8%, transparent);
+}
+
+.api-match-rule span {
+  grid-row: 1 / span 2;
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: color-mix(in srgb, var(--gold) 12%, transparent);
+  color: var(--gold-bright);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.api-match-rule strong {
+  font-size: 17px;
+}
+
+.guide-content .api-match-rule p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.api-error-list {
+  padding: 0 26px 24px;
+}
+
+.api-error-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 15px;
+  border-top: 1px solid var(--line);
+  padding: 19px 0;
+}
+
+.api-error-index {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--danger) 36%, transparent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--danger) 10%, transparent);
+  color: var(--danger);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.guide-content .api-error-item p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.guide-content .api-error-item .api-error-note {
+  border-radius: 10px;
+  padding: 9px 11px;
+  background: color-mix(in srgb, var(--danger) 7%, transparent);
+  color: var(--ink);
+}
+
+.api-pull-guide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+  gap: 24px;
+  align-items: center;
+  margin: 0 26px 26px;
+  border: 1px solid color-mix(in srgb, var(--green) 28%, var(--line));
+  border-radius: 18px;
+  padding: 20px;
+  background:
+    linear-gradient(120deg, color-mix(in srgb, var(--green) 12%, transparent), transparent 62%),
+    color-mix(in srgb, var(--panel-bright) 50%, transparent);
+}
+
+.api-pull-copy > span {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.guide-content .api-pull-copy p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.api-pull-guide ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-content .api-pull-guide li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.api-pull-guide li span {
+  display: grid;
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--green) 16%, transparent);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.api-checklist {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px 16px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: 17px 26px;
+  background: color-mix(in srgb, var(--panel-bright) 50%, transparent);
+}
+
+.api-checklist > span {
+  color: var(--danger);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.guide-content .api-checklist p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.guide-content .api-checklist a {
+  justify-self: end;
+  white-space: nowrap;
+}
+
 @media (max-width: 860px) {
   .page-shell {
     width: min(100% - 24px, 1080px);
@@ -945,6 +1282,43 @@ summary:focus-visible {
   .quick-actions,
   .choice-grid {
     grid-template-columns: 1fr;
+  }
+
+  .choice-card-guide {
+    grid-column: auto;
+    grid-template-areas:
+      "label badge"
+      "title title"
+      "description description"
+      "action action";
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .choice-card-guide b {
+    justify-self: start;
+    margin-top: 3px;
+  }
+
+  .api-basics-header {
+    display: block;
+  }
+
+  .guide-content .api-basics-back {
+    display: inline-block;
+    margin-top: 16px;
+  }
+
+  .api-parts,
+  .api-pull-guide {
+    grid-template-columns: 1fr;
+  }
+
+  .api-checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-content .api-checklist a {
+    justify-self: start;
   }
 
   .quick-actions a {
@@ -997,6 +1371,61 @@ summary:focus-visible {
   .guide-url-value {
     margin-top: 3px;
     font-size: 14px;
+  }
+
+  .choice-card-guide em {
+    justify-self: start;
+  }
+
+  .choice-card-guide b {
+    justify-self: stretch;
+    text-align: center;
+  }
+
+  .api-basics {
+    margin-top: 32px;
+    border-radius: 18px;
+  }
+
+  .api-basics-header {
+    padding: 20px;
+  }
+
+  .api-parts {
+    padding: 18px 18px 10px;
+  }
+
+  .api-match-rule {
+    grid-template-columns: 1fr;
+    margin: 0 18px 16px;
+  }
+
+  .api-match-rule span {
+    grid-row: auto;
+    justify-self: start;
+  }
+
+  .api-error-list {
+    padding: 0 18px 18px;
+  }
+
+  .api-error-item {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .api-error-index {
+    width: 32px;
+    height: 32px;
+  }
+
+  .api-pull-guide {
+    margin: 0 18px 18px;
+    padding: 17px;
+  }
+
+  .api-checklist {
+    padding: 16px 18px;
   }
 }
 
