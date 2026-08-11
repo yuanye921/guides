@@ -506,59 +506,85 @@ API 密钥栏：粘贴刚才复制的密钥。
 
 :::
 
-:::color1
-
 ### 📝 站长碎碎念（必看！）
 
-**1. 关于备货（别手抖充多了）：**
-
-现在 API 站准备了两条入口：主站在香港，备用在北京。大部分人直接用主站就好；如果个别地区运营商抽风，再切到备用试试。
-
-**所以真心建议大家：先充个十块钱试用一下！**
-
-觉得稳了、好用了再慢慢充。千万别怕麻烦一上来就斥巨资（万一用不了处理起来很麻烦），咱们细水长流嘛！
-
-**2. 关于速度（懂的都懂）：**
-
-**为了给大家最好的体验，我把入口拆成了香港主站和北京备用两种走法。**
-
-大部分同学用起来应该都比较顺畅。
-
-但也无法保证极个别地区的网络抽风，所以——先试用，再囤货！
-
-**3. 关于模型降智和渠道“掺水”：**
-
-先说结论：**模型突然变笨，不等于渠道偷偷给你换了模型。**
-
-从玩家体感来说，新模型刚发布的第一周往往最聪明、最惊艳。后面随着使用人数变多、算力被分到更多地方，服务端的资料和策略也不断调整，表现可能慢慢回落。大家常说的“资料库污染”，就是在形容资料和反馈里混入噪声以后，模型越来越爱写八股文、套固定模板的感觉。
-
-尤其是在下一代模型快要发布的时候，旧模型有时会出现比较明显的降智；每天的使用高峰期，也可能因为同时说话的人太多而临时变笨。最直观的表现包括：
-
-- 原本守得好好的格式突然疯狂掉。
-- 不读人物卡和世界书，前后设定对不上。
-- 反复使用同一套句子，八股味越来越重。
-- 上下文接不住，甚至开始胡言乱语。
-
-遇到这种情况，可以换个时间再试、重新开一段对话，或者切到备用渠道对比一下，不要只凭一次回复就急着下结论。
-
-**“降智”和“掺水”不是一回事：**
-
-- **降智：** 还是原来的员工，只是当天太忙、状态不好，或者公司调整了它的工作方式。
-- **掺水：** 标牌上写着资深员工，背后却长期换成了别的员工，或者把不同模型混在一起轮流回信。
-
-直接问模型“你是谁”，并不能判断有没有掺水。模型通常看不到自己在后台的真实版本，只会根据当前提示词猜；只要有人注入一句“你是某某模型”，它就可能照着回答。
-
-更有参考价值的是看**报错格式、限流提示、道歉或拒答信息**是否长期与标注的渠道和模型相符。如果挂着 A 模型的名字，却反复出现只有 B 渠道才有的提示，才更接近“石锤”。最好在不同时间多测几次，别拿一次抽风给模型判死刑。
-
-**4. 关于售后（驴不是 24 小时客服团队）：**
-
-本杰驴的站子虽然看起来花里胡哨，但那只是因为驴在成为文游打工人之前做的是品牌策划。预言家 TV 旗下的游戏和网站，都是驴一个人在运营维护，并没有成熟的商业化团队。
-
-群里的管理员也只是为爱发电的老玩家，没有后台权限，更不是 24 小时在线的专业客服。大家可以这样分工求助：
-
-- **基础配置问题：** 比如 Base URL 怎么填、密钥放哪里、怎么拉取模型，可以先看教程或问群里的老玩家。驴有时同时在修游戏和网站，可能顾不过来。
-- **必须直接找驴的问题：** 比如充值没到账、退款、异常扣费、反复报错等疑难杂症，请直接联系本杰驴。管理员没有后台权限，这些问题他们确实解决不了。
-
-来找驴时，最好一起带上**报错截图、发生时间、模型完整名称和使用的渠道**，这样能更快查到原因。完整 API Key 不要发在群里，先把自己的魔法钥匙收好。🫡
-
-:::
+<section class="operator-notes" aria-label="站长使用建议与售后说明">
+  <div class="operator-quick-grid">
+    <article class="operator-card operator-card-stock">
+      <header class="operator-card-head">
+        <span class="operator-card-number">01</span>
+        <div><small>关于备货</small><h4>先充十块试用</h4></div>
+      </header>
+      <p>API 站有香港主站和北京备用两个入口。大部分人先用主站；个别地区网络抽风，再切备用。</p>
+      <strong>觉得稳、用得顺手以后再慢慢充，别一上来就囤太多。</strong>
+    </article>
+    <article class="operator-card operator-card-speed">
+      <header class="operator-card-head">
+        <span class="operator-card-number">02</span>
+        <div><small>关于速度</small><h4>主站优先，备用兜底</h4></div>
+      </header>
+      <p>入口拆成两种走法，是为了让不同地区都有能用的选择。大部分时候比较顺畅，但当地网络情况没法完全保证。</p>
+      <strong>老规矩：先试用，再囤货。</strong>
+    </article>
+  </div>
+  <article class="operator-card operator-card-degrade">
+    <header class="operator-card-head operator-card-head-wide">
+      <span class="operator-card-number">03</span>
+      <div><small>关于模型状态</small><h4>降智和“掺水”不是一回事</h4></div>
+      <strong>一次回复变差，不能直接判定被换了模型</strong>
+    </header>
+    <p class="operator-lead">从玩家体感来说，新模型刚发布的第一周往往最聪明。之后随着使用人数变多、算力分散，服务端资料和策略也持续调整，表现可能慢慢回落。大家说的“资料库污染”，就是在形容资料和反馈混入噪声后，模型越来越爱写八股文、套固定模板的感觉。</p>
+    <div class="degrade-flow" aria-label="模型状态容易变化的三个阶段">
+      <div><span>发布首周</span><strong>通常最惊艳</strong><small>资源相对集中，模型的新鲜感最强</small></div>
+      <div><span>每天高峰</span><strong>可能临时变笨</strong><small>同时使用的人太多，算力被摊开</small></div>
+      <div><span>换代之前</span><strong>旧模型容易波动</strong><small>格式、记忆和文风问题会更明显</small></div>
+    </div>
+    <div class="degrade-symptoms">
+      <strong>常见表现</strong>
+      <ul>
+        <li>原本守得好好的格式突然疯狂掉</li>
+        <li>不读人物卡和世界书，前后设定对不上</li>
+        <li>反复使用同一套句子，八股味越来越重</li>
+        <li>上下文接不住，甚至开始胡言乱语</li>
+      </ul>
+      <p>可以换个时间、重新开一段对话，或切备用渠道对比。别只凭一次回复就急着下结论。</p>
+    </div>
+    <div class="degrade-compare">
+      <section class="degrade-definition degrade-definition-soft">
+        <span>降智</span>
+        <strong>还是原来的员工，只是状态变差</strong>
+        <p>可能是当天太忙、算力紧张，或者公司调整了它的工作方式。</p>
+      </section>
+      <section class="degrade-definition degrade-definition-watered">
+        <span>掺水</span>
+        <strong>标牌没变，背后却长期换了员工</strong>
+        <p>例如换成别的模型，或把不同模型混在一起轮流回信。</p>
+      </section>
+    </div>
+    <aside class="degrade-evidence">
+      <div><span>别这样测</span><strong>直接问模型“你是谁”</strong><p>模型通常看不到后台真实版本，只会根据提示词猜。注入一句身份说明，它就可能照着回答。</p></div>
+      <div><span>更有参考价值</span><strong>看报错、限流与道歉信息</strong><p>如果挂着 A 模型的名字，却在不同时段反复出现只有 B 渠道才有的提示，才更接近“石锤”。</p></div>
+    </aside>
+  </article>
+  <article class="operator-card operator-card-support">
+    <header class="operator-card-head operator-card-head-wide">
+      <span class="operator-card-number">04</span>
+      <div><small>关于售后</small><h4>驴不是 24 小时客服团队</h4></div>
+    </header>
+    <p class="operator-lead">本杰驴的站子看起来花里胡哨，是因为驴在成为文游打工人之前做的是品牌策划。预言家 TV 旗下的游戏和网站，都是驴一个人在运营维护，并没有成熟的商业化团队。</p>
+    <p>群里的管理员也是为爱发电的老玩家，没有后台权限，更不是 24 小时在线的专业客服。大家可以这样分工：</p>
+    <div class="support-routes">
+      <section>
+        <span>先问老玩家</span>
+        <strong>基础配置问题</strong>
+        <p>Base URL 怎么填、密钥放哪里、怎么拉取模型，可以先看教程或在群里求助。</p>
+      </section>
+      <section>
+        <span>直接找本杰驴</span>
+        <strong>充值、退款和疑难报错</strong>
+        <p>充值没到账、退款、异常扣费、反复报错等问题，管理员没有权限处理。</p>
+      </section>
+    </div>
+    <footer class="support-checklist"><span>来找驴时请带上</span><strong>报错截图 · 发生时间 · 模型完整名称 · 使用渠道</strong><p>完整 API Key 不要发在群里，先把自己的魔法钥匙收好。🫡</p></footer>
+  </article>
+</section>

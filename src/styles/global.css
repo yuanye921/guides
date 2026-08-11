@@ -1240,6 +1240,363 @@ summary:focus-visible {
   white-space: nowrap;
 }
 
+.operator-notes {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.operator-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.operator-card {
+  --operator-accent: var(--gold);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--operator-accent) 26%, var(--line));
+  border-radius: 20px;
+  padding: 22px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--operator-accent) 9%, transparent), transparent 38%),
+    color-mix(in srgb, var(--panel-bright) 56%, transparent);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.operator-card-stock {
+  --operator-accent: var(--green);
+}
+
+.operator-card-speed {
+  --operator-accent: var(--blue);
+}
+
+.operator-card-degrade {
+  --operator-accent: var(--danger);
+  padding: 0;
+}
+
+.operator-card-support {
+  --operator-accent: var(--gold);
+  padding: 0;
+}
+
+.operator-card-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.operator-card-head-wide {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  border-bottom: 1px solid var(--line);
+  padding: 22px 24px 18px;
+}
+
+.operator-card-number {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--operator-accent) 38%, transparent);
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--operator-accent) 11%, transparent);
+  color: var(--operator-accent);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.operator-card-head small {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--operator-accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+}
+
+.guide-content .operator-card h4 {
+  margin: 0;
+  color: var(--ink-strong);
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.operator-card-head-wide > strong {
+  max-width: 250px;
+  border-radius: 999px;
+  padding: 6px 11px;
+  background: color-mix(in srgb, var(--operator-accent) 9%, transparent);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.guide-content .operator-card > p,
+.guide-content .operator-quick-grid .operator-card p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.operator-quick-grid .operator-card > strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--ink-strong);
+  font-size: 14px;
+}
+
+.guide-content .operator-card .operator-lead {
+  margin: 0;
+  padding: 20px 24px;
+  background: color-mix(in srgb, var(--panel) 32%, transparent);
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.degrade-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--line);
+}
+
+.degrade-flow > div {
+  position: relative;
+  padding: 17px;
+  background: color-mix(in srgb, var(--panel-bright) 72%, var(--bg));
+}
+
+.degrade-flow span,
+.degrade-flow strong,
+.degrade-flow small {
+  display: block;
+}
+
+.degrade-flow span {
+  margin-bottom: 4px;
+  color: var(--danger);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.degrade-flow strong {
+  color: var(--ink-strong);
+  font-size: 16px;
+}
+
+.degrade-flow small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.degrade-symptoms {
+  margin: 16px 24px 0;
+  border-left: 4px solid var(--danger);
+  border-radius: 0 14px 14px 0;
+  padding: 16px 18px;
+  background: color-mix(in srgb, var(--danger) 7%, transparent);
+}
+
+.degrade-symptoms > strong {
+  color: var(--danger);
+  font-size: 13px;
+}
+
+.degrade-symptoms ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 22px;
+  margin: 10px 0 0;
+  padding-left: 1.1em;
+}
+
+.guide-content .degrade-symptoms li {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.guide-content .degrade-symptoms p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.degrade-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 24px;
+}
+
+.degrade-definition {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 17px;
+  background: color-mix(in srgb, var(--panel-bright) 48%, transparent);
+}
+
+.degrade-definition span,
+.degrade-definition strong {
+  display: block;
+}
+
+.degrade-definition span {
+  width: max-content;
+  margin-bottom: 7px;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.degrade-definition-soft span {
+  background: color-mix(in srgb, var(--blue) 12%, transparent);
+  color: var(--blue);
+}
+
+.degrade-definition-watered span {
+  background: color-mix(in srgb, var(--danger) 12%, transparent);
+  color: var(--danger);
+}
+
+.degrade-definition strong {
+  color: var(--ink-strong);
+  font-size: 16px;
+}
+
+.guide-content .degrade-definition p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.degrade-evidence {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border-top: 1px solid var(--line);
+  background: var(--line);
+}
+
+.degrade-evidence > div {
+  padding: 18px 24px;
+  background: color-mix(in srgb, var(--panel) 86%, var(--bg));
+}
+
+.degrade-evidence span,
+.degrade-evidence strong {
+  display: block;
+}
+
+.degrade-evidence span {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.degrade-evidence strong {
+  margin-top: 3px;
+  color: var(--ink-strong);
+  font-size: 15px;
+}
+
+.guide-content .degrade-evidence p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.operator-card-support > p:not(.operator-lead) {
+  padding: 0 24px;
+}
+
+.support-routes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 17px 24px 20px;
+}
+
+.support-routes section {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 17px;
+  background: color-mix(in srgb, var(--panel-bright) 48%, transparent);
+}
+
+.support-routes span,
+.support-routes strong {
+  display: block;
+}
+
+.support-routes span {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.support-routes section + section span {
+  color: var(--gold);
+}
+
+.support-routes strong {
+  margin-top: 4px;
+  color: var(--ink-strong);
+  font-size: 17px;
+}
+
+.guide-content .support-routes p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.support-checklist {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 14px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: 17px 24px;
+  background: color-mix(in srgb, var(--gold) 7%, transparent);
+}
+
+.support-checklist span {
+  grid-row: 1 / span 2;
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: color-mix(in srgb, var(--gold) 12%, transparent);
+  color: var(--gold-bright);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.support-checklist strong {
+  font-size: 14px;
+}
+
+.guide-content .support-checklist p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 @media (max-width: 860px) {
   .page-shell {
     width: min(100% - 24px, 1080px);
@@ -1426,6 +1783,88 @@ summary:focus-visible {
 
   .api-checklist {
     padding: 16px 18px;
+  }
+
+  .operator-notes {
+    gap: 14px;
+  }
+
+  .operator-quick-grid,
+  .degrade-flow,
+  .degrade-symptoms ul,
+  .degrade-compare,
+  .degrade-evidence,
+  .support-routes {
+    grid-template-columns: 1fr;
+  }
+
+  .operator-card {
+    border-radius: 17px;
+    padding: 18px;
+  }
+
+  .operator-card-degrade,
+  .operator-card-support {
+    padding: 0;
+  }
+
+  .operator-card-head-wide {
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: 18px;
+  }
+
+  .operator-card-head-wide > strong {
+    grid-column: 2;
+    justify-self: start;
+    max-width: none;
+    border-radius: 9px;
+    text-align: left;
+  }
+
+  .guide-content .operator-card .operator-lead {
+    padding: 17px 18px;
+  }
+
+  .degrade-flow {
+    margin: 0 18px;
+  }
+
+  .degrade-symptoms {
+    margin: 14px 18px 0;
+  }
+
+  .degrade-compare {
+    margin: 14px 18px;
+  }
+
+  .degrade-evidence {
+    gap: 0;
+  }
+
+  .degrade-evidence > div + div {
+    border-top: 1px solid var(--line);
+  }
+
+  .degrade-evidence > div {
+    padding: 17px 18px;
+  }
+
+  .operator-card-support > p:not(.operator-lead) {
+    padding: 0 18px;
+  }
+
+  .support-routes {
+    margin: 15px 18px 18px;
+  }
+
+  .support-checklist {
+    grid-template-columns: 1fr;
+    padding: 16px 18px;
+  }
+
+  .support-checklist span {
+    grid-row: auto;
+    justify-self: start;
   }
 }
 
