@@ -1,6 +1,6 @@
 ---
 title: "MiniMax 语音引擎配置教程"
-description: "按步骤完成 MiniMax 账号、API Key、Group ID、音色 ID 和 APP 内配置。"
+description: "按步骤完成 MiniMax 账号、API Key、音色 ID 和 APP 内配置。"
 date: "2026-05-28"
 order: 2
 slug: "minimax-voice"
@@ -9,7 +9,7 @@ source: "https://guides.yuyanjia.top/guides/minimax-voice"
 
 :::success
 
-本篇会带你把 MiniMax 语音引擎接到 APP 里。先准备好三个关键信息：**API Key**、**Group ID**、**音色 ID**。
+本篇会带你把 MiniMax 语音引擎接到 APP 里。新版配置只需准备两个关键信息：**API Key** 和 **音色 ID**。
 
 :::
 
@@ -28,7 +28,7 @@ source: "https://guides.yuyanjia.top/guides/minimax-voice"
 :::
 
 :::color5
-获取双密钥（⚠️最容易出错的一步，请务必仔细）：
+获取 API Key（⚠️最容易出错的一步，请务必仔细）：
 
 :::
 
@@ -49,9 +49,7 @@ source: "https://guides.yuyanjia.top/guides/minimax-voice"
 
 ![](/assets/minimax-voice/step-03.png)
 
-接着，点击左侧的 **【账户信息】**，把你的 **Group ID** 也复制下来，和密钥存在一起。
-
-![](/assets/minimax-voice/step-04.png)
+新版接入只使用这串 API Key，复制完成后就可以继续挑选音色。
 
 ## 第二步：寻找 TA 的声音（获取音色 ID）
 
@@ -92,10 +90,10 @@ source: "https://guides.yuyanjia.top/guides/minimax-voice"
 
 ## 第三步：为猫头鹰装上引擎（APP 内配置）
 
-拿到密钥、Group ID 和音色 ID 后，回到猫头鹰邮局 APP：
+拿到 API Key 和音色 ID 后，回到猫头鹰邮局 APP：
 
 :::color1
-**全局配置：** 点击首页右下角 **【⚙️ 齿轮图标】**，在 API 配置界面，将你的 **Group ID 和密钥** 粘贴到对应位置，点击保存。
+**全局配置：** 点击首页右下角 **【⚙️ 齿轮图标】**，在双面镜引擎配置界面粘贴你的 **API Key**，点击保存。
 
 :::
 
