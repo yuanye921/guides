@@ -102,7 +102,7 @@ source: "https://guides.yuyanjia.top/guides/minimax-voice"
 
 :::
 
-![](/assets/minimax-voice/step-06.png)
+![](/assets/minimax-voice/step-06-v2.png)
 
 :::color1
 **角色配置：** 点开你想听声音的 **【角色资料卡】**，将 **音色 ID** 粘贴进去，并根据喜好调节语速。
