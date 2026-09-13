@@ -353,16 +353,61 @@ API 密钥栏：粘贴刚才复制的密钥。
 
 ### 💰 按量计费和按次计费，怎么选？
 
-简单说：
-
-- **按量计费**：像按水表收费，用多少算多少。这里的“输入”不只是你这一轮刚发出去的那句话，还包括模型每次能看到的内部提示词、人物卡、预设、世界书，以及可读取的聊天历史。上下文越长，一轮实际用掉的量就可能越多；模型最后写出来的回复也会计入消耗。适合平时短聊、想用多少付多少的人，但跑长剧情时要留意余额。
-- **按次计费**：像坐一次车按车次买票，发起一次请求就收一次固定费用，通常不用一直盯着回复有多少字。长回复、长剧情时更省心；但如果重新发送一次，通常就会再算一次，而且不同渠道的稳定性、排队情况和单次价格可能差很多。
-
-可以这样选：
-
-- 想省心跑长文，经常让模型写很多：优先看按次计费。
-- 平时主要是短聊，想按实际用量付费：可以选按量计费。
-- 具体价格和规则，还是以模型广场当前显示的说明为准。
+<div class="billing-guide" aria-label="按量计费和按次计费说明">
+  <p class="billing-lead">简单说：一个是按“用了多少”算钱，一个是按“发了几次”算钱。</p>
+  <div class="billing-grid">
+    <article class="billing-card billing-card-meter">
+      <div class="billing-card-title">
+        <span class="billing-card-icon" aria-hidden="true">📏</span>
+        <div>
+          <h4>按量计费</h4>
+          <span>像看水表，用多少算多少</span>
+        </div>
+      </div>
+      <p>这里的“输入”不只是你这一轮刚发出去的那句话。</p>
+      <div class="billing-callout">
+        <strong>模型能读到的，也可能算进输入</strong>
+        <p>比如内部提示词、人物卡、预设、世界书，以及可读取的聊天历史。上下文越长，一轮实际用掉的量就可能越多。</p>
+      </div>
+      <p class="billing-card-footnote">模型最后写出来的回复也会计入消耗。适合平时短聊、想用多少付多少的人；跑长剧情时要留意余额。</p>
+    </article>
+    <article class="billing-card billing-card-request">
+      <div class="billing-card-title">
+        <span class="billing-card-icon" aria-hidden="true">🎫</span>
+        <div>
+          <h4>按次计费</h4>
+          <span>像坐车，一次请求算一张票</span>
+        </div>
+      </div>
+      <p>发起一次请求就收一次固定费用，通常不用一直盯着回复有多少字。</p>
+      <div class="billing-callout">
+        <strong>长回复、长剧情更省心</strong>
+        <p>不过重新发送一次，通常就会再算一次；不同渠道的稳定性、排队情况和单次价格也可能差很多。</p>
+      </div>
+      <p class="billing-card-footnote">适合经常写长文、想少操心字数的人。</p>
+    </article>
+  </div>
+  <section class="billing-choice">
+    <div class="billing-choice-heading">
+      <span aria-hidden="true">🧭</span>
+      <div>
+        <h4>可以这样选</h4>
+        <p>按自己的聊天习惯挑，不用死记规则。</p>
+      </div>
+    </div>
+    <div class="billing-choice-list">
+      <div class="billing-choice-item">
+        <strong>想省心跑长文</strong>
+        <span>经常让模型写很多 → 优先看按次计费</span>
+      </div>
+      <div class="billing-choice-item">
+        <strong>平时主要是短聊</strong>
+        <span>想按实际用量付费 → 可以选按量计费</span>
+      </div>
+    </div>
+    <p class="billing-note">具体价格和规则，还是以模型广场当前显示的说明为准。</p>
+  </section>
+</div>
 
 :::danger
 **💎 Gemini 系列 (推荐主力)**

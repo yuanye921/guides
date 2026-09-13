@@ -726,6 +726,178 @@ summary:focus-visible {
   font-size: clamp(22px, 3vw, 30px);
 }
 
+.billing-guide {
+  margin: 26px 0 10px;
+}
+
+.guide-content .billing-lead {
+  margin: 0 0 16px;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+
+.billing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.billing-card {
+  min-width: 0;
+  border: 1px solid color-mix(in srgb, var(--line-strong) 72%, transparent);
+  border-radius: 18px;
+  padding: 20px 20px 18px;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--gold) 12%, transparent), transparent 56%),
+    color-mix(in srgb, var(--panel-bright) 76%, transparent);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.billing-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  box-shadow: var(--soft-shadow), inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.billing-card-request {
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--blue) 12%, transparent), transparent 56%),
+    color-mix(in srgb, var(--panel-bright) 76%, transparent);
+}
+
+.billing-card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.billing-card-icon {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--panel) 74%, transparent);
+  font-size: 22px;
+}
+
+.billing-card-title h4,
+.billing-choice-heading h4 {
+  margin: 0;
+  color: var(--ink-strong);
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.billing-card-title > div > span {
+  display: block;
+  margin-top: 4px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.guide-content .billing-card > p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.billing-callout {
+  margin: 14px 0;
+  border: 1px solid color-mix(in srgb, var(--line) 86%, transparent);
+  border-radius: 13px;
+  padding: 13px 14px;
+  background: color-mix(in srgb, var(--panel) 64%, transparent);
+}
+
+.billing-callout strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--gold-bright);
+  font-size: 15px;
+}
+
+.guide-content .billing-callout p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.guide-content .billing-card .billing-card-footnote {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.billing-choice {
+  margin-top: 18px;
+  border: 1px solid color-mix(in srgb, var(--blue) 34%, var(--line));
+  border-radius: 18px;
+  padding: 18px 20px 16px;
+  background:
+    linear-gradient(120deg, color-mix(in srgb, var(--blue) 11%, transparent), transparent 62%),
+    color-mix(in srgb, var(--panel-bright) 72%, transparent);
+}
+
+.billing-choice-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.billing-choice-heading > span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.guide-content .billing-choice-heading p {
+  margin: 4px 0 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+.billing-choice-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.billing-choice-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--panel) 54%, transparent);
+}
+
+.billing-choice-item strong {
+  display: block;
+  color: var(--gold-bright);
+  font-size: 15px;
+}
+
+.billing-choice-item span {
+  display: block;
+  margin-top: 3px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.guide-content .billing-note {
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
 .guide-content p,
 .guide-content li {
   color: var(--ink);
@@ -1667,6 +1839,11 @@ summary:focus-visible {
 
   .api-parts,
   .api-pull-guide {
+    grid-template-columns: 1fr;
+  }
+
+  .billing-grid,
+  .billing-choice-list {
     grid-template-columns: 1fr;
   }
 
