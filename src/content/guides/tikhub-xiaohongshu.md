@@ -54,7 +54,7 @@ TikHub 的官方入门页会更新注册福利、充值方式和使用规则；�
 
 ## 第四步：在 Owlpost 填写 Key
 
-回到 Owlpost，点击首页右下角的 **齿轮**，进入 **魔杖配置**，向下找到 **「📕 小红书阅读凭证（TikHub）」**。
+回到 Owlpost，点击首页右下角的 **齿轮**，进入 **MCP**，找到 **「📕 小红书阅读凭证（TikHub）」**。
 
 ![](/assets/tikhub-xiaohongshu/step-02-owlpost-settings.png)
 
