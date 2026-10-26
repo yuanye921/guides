@@ -2,7 +2,7 @@
 title: "MiniMax 语音引擎配置教程"
 description: "按步骤完成 MiniMax 账号、API Key、音色 ID 和 APP 内配置。"
 date: "2026-05-28"
-order: 2
+order: 4
 slug: "minimax-voice"
 source: "https://guides.yuyanjia.top/guides/minimax-voice"
 ---

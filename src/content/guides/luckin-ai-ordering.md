@@ -2,7 +2,7 @@
 title: "让角色帮你准备瑞幸咖啡"
 description: "从瑞幸 AI 开放平台取得连接凭证，安全绑定到 Owlpost，并让角色替你准备一份可核对的到店取餐订单。"
 date: "2026-08-29"
-order: 5
+order: 8
 slug: "luckin-ai-ordering"
 source: "https://guides.yuyanjia.top/guides/luckin-ai-ordering/"
 ---

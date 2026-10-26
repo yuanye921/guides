@@ -14,7 +14,7 @@ export function getStaticPaths() {
   });
 }
 
-const { module } = Astro.props;
+const { module, slug } = Astro.props;
 const { Content, frontmatter, getHeadings } = module;
 const headings = getHeadings ? getHeadings() : [];
 const toc = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
@@ -26,7 +26,7 @@ const homePath = basePath.endsWith("/") ? basePath : `${basePath}/`;
   <main class="guide-shell">
     <section class="guide-hero">
       <a class="back-link" href={homePath}>返回教程列表</a>
-      <p class="eyebrow">Yuyanjia API Guide</p>
+      <p class="eyebrow">{frontmatter.eyebrow ?? "Yuyanjia API Guide"}</p>
       <h1>{frontmatter.title}</h1>
       <p>{frontmatter.description}</p>
     </section>
@@ -58,13 +58,23 @@ const homePath = basePath.endsWith("/") ? basePath : `${basePath}/`;
         </nav>
       </aside>
 
-      <article class="guide-content">
+      <article class="guide-content" data-guide={slug}>
         <Content />
       </article>
     </div>
   </main>
 
+  <dialog id="guide-image-viewer" aria-labelledby="guide-viewer-title">
+    <header class="guide-viewer-toolbar">
+      <strong id="guide-viewer-title">图片标注</strong>
+      <button type="button" data-image-size aria-pressed="false">原尺寸查看</button>
+      <button type="button" data-image-close aria-label="关闭图片">关闭</button>
+    </header>
+    <div class="guide-viewer-body"></div>
+  </dialog>
+
   <script>
+    import '../../scripts/guide-image-viewer';
     const links = Array.from(document.querySelectorAll("[data-toc-link]"));
     const sections = links
       .map((link) => document.getElementById(link.getAttribute("href").slice(1)))
@@ -96,6 +106,7 @@ const homePath = basePath.endsWith("/") ? basePath : `${basePath}/`;
     document.querySelectorAll(".guide-content img").forEach((image) => {
       image.setAttribute("loading", "lazy");
       image.setAttribute("decoding", "async");
+      if (image.closest('.guide-shot-open')) return;
       image.addEventListener("click", () => {
         window.open(image.currentSrc || image.src, "_blank", "noopener,noreferrer");
       });

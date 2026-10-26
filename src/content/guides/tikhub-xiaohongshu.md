@@ -2,7 +2,7 @@
 title: "让角色阅读小红书笔记（TikHub）"
 description: "注册 TikHub、充值并填写自己的 API Key，让私聊或群聊角色阅读小红书笔记、热门评论和图片。"
 date: "2026-08-25"
-order: 3
+order: 5
 slug: "tikhub-xiaohongshu"
 source: "https://guides.yuyanjia.top/guides/tikhub-xiaohongshu/"
 ---

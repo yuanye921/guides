@@ -2,7 +2,7 @@
 title: "为天气札记申请和风天气凭证"
 description: "注册和风天气、创建项目并把自己的 API Host 与 API Key 填入 OwlPost。"
 date: "2026-10-01"
-order: 6
+order: 9
 slug: "qweather"
 source: "https://guides.yuyanjia.top/guides/qweather/"
 ---

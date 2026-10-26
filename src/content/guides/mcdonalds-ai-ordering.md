@@ -2,7 +2,7 @@
 title: "让角色帮你准备麦当劳订单"
 description: "注册麦当劳账号、准备配送资料、申请并绑定 MCP Token，再在 Owlpost 私聊中让角色生成餐点确认函。"
 date: "2026-08-27"
-order: 4
+order: 7
 slug: "mcdonalds-ai-ordering"
 source: "https://guides.yuyanjia.top/guides/mcdonalds-ai-ordering/"
 ---

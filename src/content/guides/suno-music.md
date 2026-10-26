@@ -2,7 +2,7 @@
 title: "让角色为你写歌（Suno API）"
 description: "注册 open.suno.cn、创建 access_key、充值并接入 Owlpost，让角色为你创作歌曲。"
 date: "2026-09-13"
-order: 4
+order: 6
 slug: "suno-music"
 source: "https://guides.yuyanjia.top/guides/suno-music/"
 ---
