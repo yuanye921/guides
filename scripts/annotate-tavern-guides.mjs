@@ -32,7 +32,7 @@ function render(image, name, id) {
 }
 
 let total=0;
-const guideFiles = ['yuyanjia-tavern.md','yuyanjia-tavern-panels.md','yuyanjia-tavern-memory.md'];
+const guideFiles = ['yuyanjia-tavern.md','yuyanjia-tavern-preset.md','yuyanjia-tavern-memory.md'];
 const selectedFiles = process.argv.slice(2);
 if (selectedFiles.some(file => !guideFiles.includes(file))) throw new Error('Unknown tavern guide');
 for (const file of selectedFiles.length ? selectedFiles : guideFiles) {

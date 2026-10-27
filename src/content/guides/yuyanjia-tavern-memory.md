@@ -132,4 +132,4 @@ eyebrow: "Yuyanjia Cloud Tavern · Story notebook"
 
 <details><summary>固定的笔记会一直发给 AI 吗？</summary><p>固定会提高它的保留优先级，但仍受当前模型能容纳的内容限制。重要设定也请放在角色卡或世界书里。</p></details>
 
-继续阅读：[新手入门](/guides/yuyanjia-tavern/) · [面板详解](/guides/yuyanjia-tavern-panels/)
+继续阅读：[新手入门](/guides/yuyanjia-tavern/) · [黄道星盘预设指南](/guides/yuyanjia-tavern-preset/)
